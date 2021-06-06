@@ -1,19 +1,14 @@
-let countdown
-const getInput = () => {
-  countdown = document.getElementById("date").value;
-  console.log(countdown);
-   }
+let countdown = null;
 
-   function sayHi() {
-    alert(countdown);
-  }
-  
-document.getElementById("submit").addEventListener("click", getInput);
+const countdownElem = document.getElementById("date");
+const formSubmit = document.getElementById("submit");
+const countdownElement = document.getElementById("countdown");
 
-let countdowFunc = () => {
-  const countdownDate = new Date(countdown);
+const getCountdow = (countdown) => {
+  const countdownDate = new Date(countdown || Date.now());
   const currentDate = new Date();
   const timeLeft = countdownDate - currentDate;
+
   const days = Math.trunc(timeLeft / 86400000);
   const hours = Math.trunc((timeLeft - days * 24 * 3600 * 1000) / 3600000);
   const minutes = Math.trunc(
@@ -27,14 +22,18 @@ let countdowFunc = () => {
       1000
   );
 
-  const object = {
-    days, hours, minutes, seconds
-  };
-  
-  Object.keys(object).forEach((key) => {
-    document.getElementById(key).textContent = object[key];
-  });
+  return `${days}d - ${hours}h - ${minutes}m - ${seconds}s`;
 };
 
-countdowFunc();
-setInterval(countdowFunc, 1000);
+document.addEventListener("DOMContentLoaded", () => {
+  countdownElement.textContent = getCountdow(Date.now());
+});
+
+formSubmit.addEventListener("click", (e) => {
+  countdown = countdownElem.value;
+  countdownElement.textContent = getCountdow(countdown);
+});
+
+setInterval(() => {
+  countdownElement.textContent = getCountdow(countdown || Date.now());
+}, 1000);
