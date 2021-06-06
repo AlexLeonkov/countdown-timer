@@ -1,4 +1,4 @@
-const countdown = prompt("Enter the date like: day month(as a word) year?");
+const countdown = prompt('Enter the date like: "day month(as a word) year"? Example: 28 august 2021');
 
 let countdowFunc = () => {
   const countdownDate = new Date(countdown);
