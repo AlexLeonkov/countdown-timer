@@ -1,0 +1,43 @@
+
+* {
+   box-sizing: border-box; 
+}
+
+body {
+    background-image: url(./rock.jpg.jpg);
+    background-size: cover;
+    min-height: 100vh;
+    background-position: center center;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    display: flex;
+    flex-direction: column;;
+    font-family: "Stint Ultra Condensed";
+}
+
+h1{
+    font-size: 4rem;
+    margin-top: -10rem;
+    font-weight: normal;
+    margin-top: -7rem;
+}
+
+.countdown-container {
+    display: flex ;
+}
+
+.big-text {
+    font-size: 6rem;
+    line-height: 1;
+    margin: 0 2rem;
+    font-weight: bold;
+}
+
+.countdown-el {
+    text-align: center;
+}
+
+.countdown-el span {
+font-size: 1.5rem;
+}
