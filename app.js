@@ -18,10 +18,7 @@ let countdowFunc = () => {
   );
 
   const object = {
-    days,
-    hours,
-    minutes,
-    seconds,
+    days, hours, minutes, seconds
   };
   
   Object.keys(object).forEach((key) => {
