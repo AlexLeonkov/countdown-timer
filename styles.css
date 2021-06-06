@@ -1,43 +1,66 @@
-
 * {
-   box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 body {
-    background-image: url(./rock.jpg.jpg);
-    background-size: cover;
-    min-height: 100vh;
-    background-position: center center;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    display: flex;
-    flex-direction: column;;
-    font-family: "Stint Ultra Condensed";
+  background-image: url(./rock.jpg.jpg);
+  background-size: cover;
+  min-height: 100vh;
+  background-position: center center;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: "Stint Ultra Condensed";
 }
 
-h1{
-    font-size: 4rem;
-    margin-top: -10rem;
-    font-weight: normal;
-    margin-top: -7rem;
+h1 {
+  font-size: 4rem;
+  margin-top: -10rem;
+  font-weight: normal;
+  margin-top: -30rem;
+}
+
+label {
+  font-size: 2rem;;
+    font-weight: bold;
+    margin-top: -5rem;
+    margin-bottom: 2rem;
 }
 
 .countdown-container {
-    display: flex ;
+  display: flex;
 }
 
 .big-text {
-    font-size: 6rem;
-    line-height: 1;
-    margin: 0 2rem;
-    font-weight: bold;
+  font-size: 6rem;
+  line-height: 1;
+  margin: 0 2rem;
+  font-weight: bold;
 }
 
 .countdown-el {
-    text-align: center;
+  text-align: center;
 }
 
 .countdown-el span {
-font-size: 1.5rem;
+  font-size: 1.5rem;
+}
+.submit {
+  transition-duration: 0.4s;
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 1rem;
+}
+
+.button:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
 }

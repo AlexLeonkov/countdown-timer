@@ -1,4 +1,14 @@
-const countdown = prompt('Enter the date like: "day month(as a word) year"? Example: 28 august 2021');
+let countdown
+const getInput = () => {
+  countdown = document.getElementById("date").value;
+  console.log(countdown);
+   }
+
+   function sayHi() {
+    alert(countdown);
+  }
+  
+document.getElementById("submit").addEventListener("click", getInput);
 
 let countdowFunc = () => {
   const countdownDate = new Date(countdown);
